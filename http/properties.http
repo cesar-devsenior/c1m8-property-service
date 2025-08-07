@@ -1,0 +1,53 @@
+### Obtener todas las propiedades
+GET http://localhost:8080/api/properties
+Accept: application/json
+
+###
+
+### Obtener una propiedad por ID
+GET http://localhost:8080/api/properties/2
+Accept: application/json
+
+### Obtener la lista de propiedades por ciudad
+GET http://localhost:8080/api/properties/city/Ciudad de México
+Accept: application/json
+
+###
+
+### Crear una nueva propiedad (usando CreatePropertyDto)
+POST http://localhost:8080/api/properties
+Content-Type: application/json
+
+{
+  "address": "Calle 123, Colonia Centro",
+  "city": "Ciudad de México",
+  "price": 3500000.0,
+  "bedrooms": 3,
+  "bathrooms": 2,
+  "imageUrl": "https://ejemplo.com/imagen-casa.jpg",
+  "description": "Casa amplia y luminosa en el centro de la ciudad."
+}
+
+###
+
+### Actualizar una propiedad existente (ejemplo)
+PUT http://localhost:8080/api/properties/1
+Content-Type: application/json
+
+{
+  "address": "Calle 123, Colonia Centro",
+  "city": "Ciudad de México",
+  "price": 3700000.0,
+  "bedrooms": 4,
+  "bathrooms": 3,
+  "imageUrl": "https://www.lifeder.com/wp-content/uploads/2020/09/propiedad-vivienda-min.jpg",
+  "description": "Casa remodelada, ahora con más espacio y comodidades."
+}
+
+###
+
+### Eliminar una propiedad
+DELETE http://localhost:8080/api/properties/1
+
+
+
