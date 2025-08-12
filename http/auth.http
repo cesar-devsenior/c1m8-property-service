@@ -1,0 +1,55 @@
+### Prueba de login exitoso
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "juan.perez@example.com",
+  "password": "miContrasenaSegura"
+}
+
+###
+
+### Prueba de login con credenciales incorrectas
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "demo@example.com",
+  "password": "contrasena_incorrecta"
+}
+
+###
+
+### Prueba de registro exitoso
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "Juan Pérez",
+  "email": "juan.perez@example.com",
+  "password": "miContrasenaSegura"
+}
+
+###
+
+### Prueba de registro con email ya existente
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "Usuario Demo",
+  "email": "demo@example.com",
+  "password": "password123"
+}
+
+###
+
+### Prueba de registro con datos inválidos (nombre muy corto)
+POST http://localhost:8080/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "J",
+  "email": "correo_invalido",
+  "password": "123"
+}
